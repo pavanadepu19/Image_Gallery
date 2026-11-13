@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Gallery</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="help" href="readme.md">
+</head>
+<body>
+    <!-- Navigation -->
+    <header class="navbar">
+        <a href="#" class="brand">
+            <span>
+                <span class="brand-name">GALLERY</span>
+            </span>
+        </a>
+        <nav class="nav-links">
+            <a href="#" class="active">Home</a>
+            <a href="#gallery">Explore</a>
+            <a href="#collections">Collections</a>
+            <a href="#about">About</a>
+        </nav>
+        <div class="nav-actions">
+            <div class="search-box">
+                <span>⌕</span>
+                <input type="search" id="searchInput"
+                       placeholder="Search images..." aria-label="Search images">
+            </div>
+            <button class="favorite-nav" id="showFavorites"
+                    aria-label="Show favorites" title="Show favorites">
+                ♡
+            </button>
+        </div>
+        <button class="menu-toggle" id="menuToggle" aria-label="Toggle navigation">☰</button>
+    </header>
+    <!-- Hero -->
+    <section class="hero" id="about">
+        <div class="hero-content">
+            <h1>A Collection of<br>Memories</h1>
+            <a href="#gallery" class="hero-button">
+                Explore Gallery <span>→</span>
+            </a>
+        </div>
+    </section>
+    <!-- Gallery -->
+    <main id="gallery" class="gallery-section">
+        <div class="section-heading" id="collections">
+            <span class="eyebrow">COLLECTIONS</span>
+            <h2>Explore the Gallery</h2>
+        </div>
+        <!-- Category filters -->
+        <div class="filter-container" id="filterContainer">
+            <button class="filter-btn active" data-category="all">All</button>
+            <button class="filter-btn" data-category="camera">Camera</button>
+            <button class="filter-btn" data-category="screenshots">Screenshots</button>
+            <button class="filter-btn" data-category="downloads">Downloads</button>
+            <button class="filter-btn" data-category="others">Others</button>
+        </div>
+        <div class="gallery-grid" id="galleryGrid">
+        </div>
+        <p class="empty-message" id="emptyMessage" hidden>
+            No images found. Try another search.
+        </p>
+    </main>
+    <!-- Lightbox -->
+    <div class="lightbox" id="lightbox" aria-hidden="true">
+        <button class="lightbox-close" id="closeLightbox"
+                aria-label="Close image">×</button>
+        <button class="lightbox-arrow previous" id="prevImage"
+                aria-label="Previous image">‹</button>
+        <div class="lightbox-content">
+            <img src="" alt="" id="lightboxImage">
+            <div class="lightbox-info">
+                <div>
+                    <h3 id="lightboxTitle"></h3>
+                    <p id="lightboxCategory"></p>
+                </div>
+                <span id="imageCounter"></span>
+            </div>
+        </div>
+        <button class="lightbox-arrow next" id="nextImage"
+                aria-label="Next image">›</button>
+    </div>
+    <!-- Footer -->
+    <footer class="footer">
+        <a href="#" class="brand footer-brand">
+            <span class="brand-name">GALLERY
+            </span>
+        </a>
+        <div class="footer-links">
+            <a href="#">Home</a>
+            <a href="#gallery">Explore</a>
+            <a href="#collections">Collections</a>
+            <a href="#about">About</a>
+        </div>
+        <p class="copyright">
+            © 2026 FRAME. All rights reserved.
+        </p>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
